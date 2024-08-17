@@ -33,37 +33,37 @@ class DailyActivityController extends GetxController {
       title: "Jogging",
       time: "Today, 08:10 AM",
       distance: "2.32",
-      totalDistance: "5.00",
+      totalDistance: "5.00 miles",
       calories: "238.2 cal",
       imagePath:
-          "assets/images/user.png", // Update with your actual image paths
+          "assets/icons/activity/jogging.png", 
     ),
     DailyActivity(
       title: "Cycling",
       time: "Today, 08:10 AM",
       distance: "10.00",
-      totalDistance: "10.00",
+      totalDistance: "10.00 miles",
       calories: "563.4 cal",
       imagePath:
-          "assets/images/user.png", // Update with your actual image paths
+          "assets/icons/activity/cycling.png", 
     ),
     DailyActivity(
-      title: "Jogging",
+      title: "Jumping",
       time: "Today, 08:10 AM",
-      distance: "2.32",
-      totalDistance: "5.00",
-      calories: "238.2 cal",
+      distance: "13.32",
+      totalDistance: "15.00 ft",
+      calories: "408.2 cal",
       imagePath:
-          "assets/images/user.png", // Update with your actual image paths
+          "assets/icons/activity/jumping.png", 
     ),
     DailyActivity(
-      title: "Cycling",
+      title: "Running",
       time: "Today, 08:10 AM",
-      distance: "10.00",
-      totalDistance: "10.00",
-      calories: "563.4 cal",
+      distance: "6.46",
+      totalDistance: "8.00 miles",
+      calories: "354.9 cal",
       imagePath:
-          "assets/images/user.png", // Update with your actual image paths
+          "assets/icons/activity/running.png", 
     ),
   ].obs;
 }

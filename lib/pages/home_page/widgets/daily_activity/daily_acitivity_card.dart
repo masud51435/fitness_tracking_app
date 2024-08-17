@@ -66,7 +66,11 @@ class DailyActivityCard extends StatelessWidget {
               const SizedBox(height: 8),
               Row(
                 children: [
-                  Image.asset(imagePath, width: 40, height: 40),
+                  Image.asset(
+                    imagePath,
+                    height: 50,
+                    fit: BoxFit.cover,
+                  ),
                   const SizedBox(width: 8),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +87,7 @@ class DailyActivityCard extends StatelessWidget {
                               ),
                             ),
                             TextSpan(
-                              text: "/$totalDistance miles",
+                              text: "/$totalDistance",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w600,
