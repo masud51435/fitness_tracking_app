@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../common/Custom_appbar.dart';
+import '../../../common/circle_icon_button.dart';
 import '../../../core/app_colors.dart';
 
 class HomeAppBar extends StatelessWidget {
@@ -50,27 +51,21 @@ class HomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        InkWell(
+        CircleIconButton(
           onTap: () {},
-          borderRadius: BorderRadius.circular(20),
-          child: Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: greyColor),
-            ),
-            child: Badge(
-              backgroundColor: Colors.orangeAccent,
-              textColor: whiteColor,
-              label: const Text('2'),
-              child: Icon(
-                Iconsax.notification,
-                color: blackColor,
-              ),
+          icon: Badge(
+            backgroundColor: Colors.orangeAccent,
+            textColor: whiteColor,
+            label: const Text('2'),
+            child: Icon(
+              Iconsax.notification,
+              color: blackColor,
             ),
           ),
-        )
+        ),
       ],
     );
   }
 }
+
+

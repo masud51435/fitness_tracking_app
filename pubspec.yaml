@@ -38,6 +38,8 @@ dependencies:
   google_fonts: ^6.2.1
   iconsax: ^0.0.8
   carousel_slider: ^5.0.0
+  fl_chart: ^0.68.0
+  chart_sparkline: ^1.0.15+1
 
 dev_dependencies:
   flutter_test:

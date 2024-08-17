@@ -23,6 +23,7 @@ class AppSectionHeading extends StatelessWidget {
             text,
             style: Theme.of(context).textTheme.headlineSmall!.apply(
                   color: textColor,
+                  fontWeightDelta: 2,
                 ),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
