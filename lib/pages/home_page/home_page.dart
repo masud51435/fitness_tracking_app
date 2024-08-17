@@ -1,4 +1,3 @@
-import 'package:fitness_tracking_app/common/section_heading.dart';
 import 'package:flutter/material.dart';
 import '../../common/custom_divider.dart';
 import 'widgets/daily_activity/home_activity.dart';
@@ -12,7 +11,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

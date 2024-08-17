@@ -1,7 +1,6 @@
 import 'package:fitness_tracking_app/core/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 import '../../../../common/section_heading.dart';
 import '../../../../controllers/goal_controller.dart';
@@ -17,7 +16,29 @@ class GoalSection extends StatelessWidget {
 
     return Column(
       children: [
-        const AppSectionHeading(text: 'Goals'),
+        AppSectionHeading(
+          text: 'Goals',
+          anotherItem: InkWell(
+            onTap: () {},
+            child: const Row(
+              children: [
+                Text(
+                  'See All',
+                  style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 16,
+                  ),
+                ),
+                SizedBox(width: 5),
+                Icon(
+                  Icons.arrow_forward_ios,
+                  size: 16,
+                  color: Colors.orange,
+                ),
+              ],
+            ),
+          ),
+        ),
         Obx(() {
           return ListView.builder(
             itemCount: controller.goals.length,
