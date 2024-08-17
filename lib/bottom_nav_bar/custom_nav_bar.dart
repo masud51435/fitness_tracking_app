@@ -20,8 +20,9 @@ class CustomNavBar extends StatelessWidget {
         () => NavigationBar(
           backgroundColor: whiteColor,
           selectedIndex: controller.currentIndex.value,
-          elevation: 0.5,
+          elevation: 5,
           height: 70,
+          indicatorColor: Colors.deepOrange.shade100,
           onDestinationSelected: (int index) =>
               controller.currentIndex.value = index,
           destinations: const [
@@ -30,18 +31,17 @@ class CustomNavBar extends StatelessWidget {
               label: 'Home',
             ),
             NavigationDestination(
-              icon: Icon(Iconsax.search_normal),
-              label: 'SEARCH',
+              icon: Icon(Iconsax.activity),
+              label: 'Activity',
             ),
             NavigationDestination(
-              icon: Icon(Iconsax.heart),
-              label: 'WISHLIST',
+              icon: Icon(Iconsax.graph),
+              label: 'Statistics',
             ),
             NavigationDestination(
               icon: Icon(Iconsax.user),
-              label: 'ACCOUNT',
+              label: 'Profile',
             ),
-           
           ],
         ),
       ),
@@ -60,6 +60,5 @@ class NavbarController extends GetxController {
     const Activity(),
     const Statistics(),
     const Profile(),
-    
   ];
 }

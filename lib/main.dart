@@ -1,3 +1,4 @@
+import 'package:fitness_tracking_app/core/app_colors.dart';
 import 'package:fitness_tracking_app/core/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,8 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Fitness Tracking App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: whiteColor),
         useMaterial3: true,
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
@@ -25,4 +27,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
