@@ -32,8 +32,9 @@ class DailyActivityController extends GetxController {
     DailyActivity(
       title: "Jogging",
       time: "Today, 08:10 AM",
-      distance: "2.32",
-      totalDistance: "5.00 miles",
+      distance: 2.32,
+      totalDistance: 5.00 ,
+      unit: 'miles',
       calories: "238.2 cal",
       imagePath:
           "assets/icons/activity/jogging.png", 
@@ -41,8 +42,9 @@ class DailyActivityController extends GetxController {
     DailyActivity(
       title: "Cycling",
       time: "Today, 08:10 AM",
-      distance: "10.00",
-      totalDistance: "10.00 miles",
+      distance: 10.00,
+      totalDistance: 10.00,
+      unit: 'miles',
       calories: "563.4 cal",
       imagePath:
           "assets/icons/activity/cycling.png", 
@@ -50,8 +52,9 @@ class DailyActivityController extends GetxController {
     DailyActivity(
       title: "Jumping",
       time: "Today, 08:10 AM",
-      distance: "13.32",
-      totalDistance: "15.00 ft",
+      distance: 13.32,
+      totalDistance: 15.00,
+      unit: 'feet',
       calories: "408.2 cal",
       imagePath:
           "assets/icons/activity/jumping.png", 
@@ -59,8 +62,9 @@ class DailyActivityController extends GetxController {
     DailyActivity(
       title: "Running",
       time: "Today, 08:10 AM",
-      distance: "6.46",
-      totalDistance: "8.00 miles",
+      distance: 6.46,
+      totalDistance: 8.00,
+      unit: 'miles',
       calories: "354.9 cal",
       imagePath:
           "assets/icons/activity/running.png", 

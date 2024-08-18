@@ -45,8 +45,9 @@ class ActivitySection extends StatelessWidget {
                       return DailyActivityCard(
                         title: activity.title,
                         time: activity.time,
-                        distance: activity.distance,
-                        totalDistance: activity.totalDistance,
+                        distance: activity.distance.toString(),
+                        totalDistance: activity.totalDistance.toString(),
+                        unit: activity.unit,
                         calories: activity.calories,
                         imagePath: activity.imagePath,
                         pauseTap: () {},

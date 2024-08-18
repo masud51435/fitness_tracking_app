@@ -7,6 +7,7 @@ class DailyActivityCard extends StatelessWidget {
   final String totalDistance;
   final String calories;
   final String imagePath;
+  final String unit;
   final void Function()? pauseTap;
 
   const DailyActivityCard({
@@ -18,6 +19,7 @@ class DailyActivityCard extends StatelessWidget {
     required this.calories,
     required this.imagePath,
     this.pauseTap,
+    required this.unit,
   });
 
   @override
@@ -87,7 +89,7 @@ class DailyActivityCard extends StatelessWidget {
                               ),
                             ),
                             TextSpan(
-                              text: "/$totalDistance",
+                              text: "/$totalDistance $unit",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w600,
@@ -114,11 +116,17 @@ class DailyActivityCard extends StatelessWidget {
           const Spacer(),
           InkWell(
             onTap: pauseTap,
-            child: const Icon(
-              Icons.pause_circle_filled,
-              size: 30,
-              color: Colors.deepOrange,
-            ),
+            child: distance == totalDistance
+                ? const Icon(
+                    Icons.check,
+                    size: 30,
+                    color: Colors.deepOrange,
+                  )
+                : const Icon(
+                    Icons.pause_circle_filled,
+                    size: 30,
+                    color: Colors.deepOrange,
+                  ),
           ),
         ],
       ),

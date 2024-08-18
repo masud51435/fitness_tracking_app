@@ -1,10 +1,11 @@
 class DailyActivity {
   final String title;
   final String time;
-  final String distance;
-  final String totalDistance;
+  final double distance;
+  final double totalDistance;
   final String calories;
   final String imagePath;
+  final String unit;
 
   DailyActivity({
     required this.title,
@@ -13,5 +14,6 @@ class DailyActivity {
     required this.totalDistance,
     required this.calories,
     required this.imagePath,
+    required this.unit,
   });
 }
