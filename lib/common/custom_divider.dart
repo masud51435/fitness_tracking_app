@@ -5,15 +5,16 @@ class CustomDivider extends StatelessWidget {
   const CustomDivider({
     super.key,
     this.topSpace = 25,
+    this.thickness = 20,
   });
-  final double topSpace;
+  final double topSpace, thickness;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: topSpace),
       child: Divider(
-        thickness: 20,
+        thickness: thickness,
         color: greyColor.withOpacity(0.16),
       ),
     );

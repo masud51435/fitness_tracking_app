@@ -1,7 +1,5 @@
 import 'package:fitness_tracking_app/common/custom_divider.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 import '../../../common/section_heading.dart';
 import '../../../controllers/activity_controller.dart';

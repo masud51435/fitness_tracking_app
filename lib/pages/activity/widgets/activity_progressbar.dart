@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../controllers/activity_controller.dart';
-import '../../../core/app_colors.dart';
 
 class ActivityProgressBar extends StatelessWidget {
   const ActivityProgressBar({
