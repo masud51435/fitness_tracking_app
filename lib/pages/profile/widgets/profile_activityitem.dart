@@ -13,14 +13,14 @@ class ProfileActivityItem extends StatelessWidget {
   final IconData icon;
   final Color? color;
   final String title;
-  final double value;
+  final String value;
   final String unit;
   final String time;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, bottom: 25),
+      padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
       child: Row(
         children: [
           Container(

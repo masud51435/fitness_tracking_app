@@ -1,15 +1,13 @@
 import 'package:fitness_tracking_app/common/custom_divider.dart';
-import 'package:fitness_tracking_app/common/section_heading.dart';
 import 'package:fitness_tracking_app/controllers/profile_controller.dart';
-import 'package:fitness_tracking_app/core/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../common/Custom_appbar.dart';
 import 'widgets/others_section.dart';
-import 'widgets/profile_activityitem.dart';
-import 'widgets/profile_tile.dart';
 import 'widgets/sleep_and_goal_section.dart';
+import 'widgets/top_profile_detail.dart';
+import 'widgets/week_progrss_bar_chart.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -33,6 +31,12 @@ class Profile extends StatelessWidget {
               topSpace: 10,
               thickness: 10,
             ),
+            TopProfileDetailSection(controller: controller),
+            const CustomDivider(
+              topSpace: 0,
+              thickness: 10,
+            ),
+            WeekProgressBarChart(controller: controller),
             SleepAndGoalSection(controller: controller),
             const OthersSection(),
           ],
@@ -41,5 +45,3 @@ class Profile extends StatelessWidget {
     );
   }
 }
-
-
