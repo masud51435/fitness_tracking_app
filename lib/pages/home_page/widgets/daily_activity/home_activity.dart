@@ -32,6 +32,8 @@ class ActivitySection extends StatelessWidget {
         ),
         Obx(
           () {
+            // Filter out DailActivities where the title is 'Others'
+            final filterActivity = controller.dailyActivities.where((activity) => activity.title != "Others").toList();
             return Column(
               children: [
                 SizedBox(
@@ -39,17 +41,17 @@ class ActivitySection extends StatelessWidget {
                   child: ListView.builder(
                     controller: controller.scrollController,
                     scrollDirection: Axis.horizontal,
-                    itemCount: controller.dailyActivities.length,
+                    itemCount: filterActivity.length,
                     itemBuilder: (context, index) {
-                      var activity = controller.dailyActivities[index];
+                      var activity = filterActivity[index];
                       return DailyActivityCard(
-                        title: activity.title,
-                        time: activity.time,
+                        title: activity.title!,
+                        time: activity.time!,
                         distance: activity.distance.toString(),
                         totalDistance: activity.totalDistance.toString(),
-                        unit: activity.unit,
-                        calories: activity.calories,
-                        imagePath: activity.imagePath,
+                        unit: activity.unit!,
+                        calories: activity.calories!,
+                        imagePath: activity.imagePath!,
                         pauseTap: () {},
                       );
                     },
@@ -58,7 +60,7 @@ class ActivitySection extends StatelessWidget {
                 const SizedBox(height: 20),
                 AnimatedSmoothIndicator(
                   activeIndex: controller.currentPageIndex.value,
-                  count: controller.dailyActivities.length,
+                  count: filterActivity.length,
                   effect: ScrollingDotsEffect(
                     activeDotColor: Colors.grey,
                     dotColor: Colors.grey.shade400,

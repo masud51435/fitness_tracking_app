@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 class CustomDivider extends StatelessWidget {
   const CustomDivider({
     super.key,
+    this.topSpace = 25,
   });
+  final double topSpace;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 25),
+      padding: EdgeInsets.only(top: topSpace),
       child: Divider(
         thickness: 20,
         color: greyColor.withOpacity(0.16),
