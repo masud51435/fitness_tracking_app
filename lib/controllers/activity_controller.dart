@@ -13,8 +13,8 @@ class DailyActivityController extends GetxController {
   var totalSteps = 19124.obs;
   var totalTime = "2h 14m".obs;
 
-  var days = <DateTime>[].obs;
-  var selectedIndex = 0.obs;
+  List<DateTime> days = <DateTime>[].obs;
+  RxInt selectedIndex = 0.obs;
 
   @override
   void onInit() {
@@ -22,6 +22,7 @@ class DailyActivityController extends GetxController {
     super.onInit();
     _generateDaysOfMonth();
     _setSelectedIndex();
+
     scrollController.addListener(
       () {
         final pageIndex = (scrollController.offset / (Get.width / 2)).round();
@@ -39,7 +40,7 @@ class DailyActivityController extends GetxController {
     for (int i = 0; i < daysInMonth; i++) {
       tempDays.add(DateTime(now.year, now.month, i + 1));
     }
-   
+
     days.addAll(tempDays);
   }
 
@@ -50,7 +51,6 @@ class DailyActivityController extends GetxController {
 
   void onItemTap(int index) {
     selectedIndex.value = index;
-    print("Selected index updated to: $selectedIndex");
   }
 
   bool isSelect(int index) {
