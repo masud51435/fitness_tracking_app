@@ -19,7 +19,6 @@ class ActivityProgressBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
                 "You've burned",
@@ -28,14 +27,19 @@ class ActivityProgressBar extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              const Spacer(),
               Obx(
                 () => Text(
-                  "🔥 ${controller.totalCaloriesBurned.value} cal",
+                  "🔥 ${controller.totalCaloriesBurned.value} ",
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+              ),
+              Text(
+                "cal",
+                style: TextStyle(fontSize: 17, color: Colors.grey[800]),
               ),
             ],
           ),
