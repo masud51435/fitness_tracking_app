@@ -74,7 +74,7 @@ class ActivityProgressBar extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 5, right: 15),
                     child: VerticalDivider(
                       thickness: 2,
-                      color: greyColor,
+                      color: Colors.grey[400],
                     ),
                   ),
                   Expanded(
@@ -82,7 +82,7 @@ class ActivityProgressBar extends StatelessWidget {
                       children: controller.dailyActivities.map(
                         (activity) {
                           return Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 15),
+                            padding: const EdgeInsets.symmetric(vertical: 14),
                             child: Row(
                               children: [
                                 Expanded(
@@ -96,7 +96,8 @@ class ActivityProgressBar extends StatelessWidget {
                                 const SizedBox(width: 8),
                                 Text(
                                   "${activity.percentage!.toInt()}%",
-                                  style: TextStyle(color: activity.color),
+                                  style: TextStyle(
+                                      color: activity.color, fontSize: 15),
                                 ),
                               ],
                             ),

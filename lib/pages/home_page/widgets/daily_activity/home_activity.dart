@@ -33,7 +33,9 @@ class ActivitySection extends StatelessWidget {
         Obx(
           () {
             // Filter out DailActivities where the title is 'Others'
-            final filterActivity = controller.dailyActivities.where((activity) => activity.title != "Others").toList();
+            final filterActivity = controller.dailyActivities
+                .where((activity) => activity.title != "Others")
+                .toList();
             return Column(
               children: [
                 SizedBox(

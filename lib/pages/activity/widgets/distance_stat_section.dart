@@ -89,7 +89,7 @@ class DistanceAndStatSection extends StatelessWidget {
                 const SizedBox(width: 20),
                 StatCard(
                   icon: Icons.timer,
-                  color: Colors.orange,
+                  color: Colors.blueAccent,
                   label: "Time",
                   value: controller.totalTime.value,
                 ),
