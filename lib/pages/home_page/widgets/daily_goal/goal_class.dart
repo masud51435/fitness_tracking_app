@@ -26,3 +26,17 @@ class GoalActivity {
   final int time;
   final String image;
 }
+
+class Workout {
+  String title;
+  int current;
+  int total;
+  String timeRemaining;
+
+  Workout({
+    required this.title,
+    required this.current,
+    required this.total,
+    required this.timeRemaining,
+  });
+}

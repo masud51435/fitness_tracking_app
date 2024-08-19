@@ -81,4 +81,25 @@ class GoalsController extends GetxController {
       image: 'assets/icons/goal_activity/lower_back.png',
     ),
   ].obs;
+
+  final List<Workout> workoutList = [
+    Workout(
+      title: "Chest Workout",
+      current: 5,
+      total: 12,
+      timeRemaining: "15 min remaining",
+    ),
+    Workout(
+      title: "Legs Workout",
+      current: 3,
+      total: 20,
+      timeRemaining: "23 min remaining",
+    ),
+    Workout(
+      title: "Arms Workout",
+      current: 8,
+      total: 10,
+      timeRemaining: "10 min remaining",
+    ),
+  ].obs;
 }
