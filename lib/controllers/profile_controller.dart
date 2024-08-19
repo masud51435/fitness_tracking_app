@@ -9,16 +9,36 @@ class ProfileController extends GetxController {
   var weeklyTotalDistance = 50.8.obs;
   var weeklyTotalSteps = 67690.obs;
 
-  final List<GoalData> goalData = [
-    GoalData(day: 'Mon', value: 2),
-    GoalData(day: 'Tue', value: 5),
-    GoalData(day: 'Wed', value: 3),
-    GoalData(day: 'Thu', value: 4),
-    GoalData(day: 'Fri', value: 6),
-    GoalData(day: 'Sat', value: 2),
-    GoalData(day: 'Sun', value: 1),
-  ];
+  final maxY = 2000.0;
 
-  int get totalGoals => goalData.length;
-  int get completedGoals => goalData.where((data) => data.value > 0).length;
+  RxInt completedGoals = 0.obs;
+
+  final weeklyGoals = [
+    1500,
+    2000,
+    2000,
+    1000,
+    500,
+    2200,
+    890,
+  ].obs;
+
+  RxList<bool> goalIndicators = List.filled(7, false).obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    _checkGoals();
+  }
+
+  void _checkGoals() {
+    int completed = 0;
+    for (int i = 0; i < weeklyGoals.length; i++) {
+      if (weeklyGoals[i] >= maxY) {
+        goalIndicators[i] = true;
+        completed++;
+      }
+    }
+    completedGoals.value = completed;
+  }
 }

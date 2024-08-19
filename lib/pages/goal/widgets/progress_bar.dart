@@ -32,7 +32,7 @@ class GoalProgressChart extends StatelessWidget {
   }
 
   List<BarChartGroupData> _buildBarGroups() {
-    return controller.displayedData.value.asMap().entries.map((entry) {
+    return controller.displayedData.asMap().entries.map((entry) {
       int index = entry.key;
       List<int> values = entry.value;
 

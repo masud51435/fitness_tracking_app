@@ -25,8 +25,9 @@ class WeekProgressBarChart extends StatelessWidget {
           child: Column(
             children: [
               WeeklyProgressReportRow(controller: controller),
+              const SizedBox(height: 15),
               ProgressBar(controller: controller),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               ProgressGoals(controller: controller),
             ],
           ),
@@ -39,11 +40,3 @@ class WeekProgressBarChart extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-

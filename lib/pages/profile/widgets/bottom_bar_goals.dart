@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../controllers/profile_controller.dart';
 
@@ -12,19 +13,19 @@ class ProgressGoals extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text.rich(
-      TextSpan(
-        children: [
+    return Obx(() => Text.rich(
           TextSpan(
-            text: 'You\'ve completed',
-            style: TextStyle(
-              fontSize: 15,
-              color: Colors.grey[600],
-            ),
-          ),
-          TextSpan(
-            text: ' ${controller.completedGoals}',
-            style: const TextStyle(
+            children: [
+              TextSpan(
+                text: 'You\'ve completed',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.grey[600],
+                ),
+              ),
+              TextSpan(
+                text: ' ${controller.completedGoals.value}',
+                style: const TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
@@ -36,9 +37,9 @@ class ProgressGoals extends StatelessWidget {
               color: Colors.grey[600],
             ),
           ),
-          TextSpan(
-            text: ' ${controller.totalGoals}',
-            style: const TextStyle(
+          const TextSpan(
+            text: ' 7',
+            style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
@@ -52,6 +53,7 @@ class ProgressGoals extends StatelessWidget {
           ),
         ],
       ),
+    ),
     );
   }
 }
