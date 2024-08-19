@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 class StatisticsController extends GetxController {
+  static StatisticsController get instance => Get.find();
   RxInt progress = 56.obs;
   RxDouble caloriesBurned = 1116.5.obs;
   RxInt steps = 19124.obs;

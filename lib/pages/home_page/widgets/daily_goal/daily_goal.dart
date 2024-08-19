@@ -19,7 +19,7 @@ class GoalSection extends StatelessWidget {
         AppSectionHeading(
           text: 'Goals',
           anotherItem: InkWell(
-            onTap: () {},
+            onTap: () => Get.toNamed('/goal'),
             child: const Row(
               children: [
                 Text(
@@ -41,12 +41,12 @@ class GoalSection extends StatelessWidget {
         ),
         Obx(() {
           return ListView.builder(
-            itemCount: controller.goals.length,
+            itemCount: controller.dailyGoals.length,
             shrinkWrap: true,
             padding: const EdgeInsets.all(0),
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
-              final goal = controller.goals[index];
+              final goal = controller.dailyGoals[index];
               return Card(
                 margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
                 elevation: 5,

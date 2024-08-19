@@ -3,11 +3,11 @@ import 'package:get/get.dart';
 import '../pages/profile/widgets/goal_data_class.dart';
 
 class ProfileController extends GetxController {
- 
+  static ProfileController get instance => Get.find();
+
   var weeklyTotalCaloriesBurned = 6730.5.obs;
   var weeklyTotalDistance = 50.8.obs;
   var weeklyTotalSteps = 67690.obs;
-
 
   final List<GoalData> goalData = [
     GoalData(day: 'Mon', value: 2),

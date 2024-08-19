@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../pages/activity/widgets/activity_class.dart';
 
 class DailyActivityController extends GetxController {
+   static DailyActivityController get instance => Get.find();
   RxInt currentPageIndex = 0.obs;
   final ScrollController scrollController = ScrollController();
 

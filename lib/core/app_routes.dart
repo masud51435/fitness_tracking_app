@@ -1,4 +1,5 @@
 import 'package:fitness_tracking_app/pages/activity/activity.dart';
+import 'package:fitness_tracking_app/pages/goal/goal.dart';
 import 'package:fitness_tracking_app/pages/profile/profile.dart';
 import 'package:fitness_tracking_app/pages/statistics/statistics.dart';
 import 'package:get/get.dart';
@@ -12,6 +13,7 @@ class AppRoutes {
   static String ACTIVITY = '/activity';
   static String STATISTICS = '/statistics';
   static String PROFILE = '/profile';
+  static String GOAL = '/goal';
 
   static List<GetPage> routes = [
     GetPage(
@@ -33,6 +35,10 @@ class AppRoutes {
     GetPage(
       name: PROFILE,
       page: () => const Profile(),
+    ),
+    GetPage(
+      name: GOAL,
+      page: () => const Goal(),
     ),
     
    
