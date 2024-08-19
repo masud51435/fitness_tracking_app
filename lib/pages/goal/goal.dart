@@ -1,8 +1,11 @@
 import 'package:fitness_tracking_app/common/Custom_appbar.dart';
 import 'package:fitness_tracking_app/common/custom_divider.dart';
+import 'package:fitness_tracking_app/common/section_heading.dart';
 import 'package:fitness_tracking_app/controllers/goal_controller.dart';
+import 'package:fitness_tracking_app/pages/goal/widgets/goal_activities_items.dart';
 import 'package:flutter/material.dart';
 
+import 'widgets/goal_progress.dart';
 import 'widgets/top_banner.dart';
 
 class Goal extends StatelessWidget {
@@ -28,9 +31,13 @@ class Goal extends StatelessWidget {
             const CustomDivider(topSpace: 10),
             TopBanner(controller: controller),
             const CustomDivider(topSpace: 0),
+            GoalProgress(controller: controller),
+            GoalActivitiesItems(controller: controller),
           ],
         ),
       ),
     );
   }
 }
+
+

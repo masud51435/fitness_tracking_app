@@ -80,5 +80,5 @@ class GoalsController extends GetxController {
       time: 18,
       image: 'assets/icons/goal_activity/lower_back.png',
     ),
-  ];
+  ].obs;
 }
