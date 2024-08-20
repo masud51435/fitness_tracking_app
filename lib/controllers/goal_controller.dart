@@ -112,19 +112,19 @@ class GoalsController extends GetxController {
   // Weekly, Monthly, and Yearly data
   var weeklyData = [
     [60, 40, 80], // Monday
-    [50, 60, 30], // Tuesday
-    [70, 50, 60], // Wednesday
+    [50, 60, 96], // Tuesday
+    [70, 92, 60], // Wednesday
     [30, 40, 70], // Thursday
-    [80, 60, 50], // Friday
+    [90, 60, 50], // Friday
     [60, 70, 40], // Saturday
-    [50, 30, 60], // Sunday
+    [50, 30, 90], // Sunday
   ].obs;
 
   var monthlyData = [
     [40, 50, 60],
     [50, 40, 70],
     [30, 60, 40],
-    [70, 50, 30],
+    [90, 50, 30],
     [60, 70, 80],
     [80, 60, 70],
     [60, 30, 50],
@@ -134,7 +134,7 @@ class GoalsController extends GetxController {
     [50, 60, 70],
     [70, 50, 80],
     [60, 40, 50],
-    [30, 60, 40],
+    [30, 95, 40],
     [80, 70, 60],
     [50, 40, 60],
     [60, 70, 80],
