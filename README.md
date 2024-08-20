@@ -11,4 +11,4 @@ This is a fitness tracking app that allows users to monitor their daily activiti
 ## Installation Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/masud51435/fitness_tracking_app.git
+   https://github.com/masud51435/fitness_tracking_app.git
