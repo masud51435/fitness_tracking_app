@@ -1,16 +1,14 @@
-# fitness_tracking_app
+# Fitness Tracking App
 
-A new Flutter project.
+This is a fitness tracking app that allows users to monitor their daily activities, set fitness goals, and track their progress over time.
 
-## Getting Started
+## Features
+- Daily activity tracking (steps, calories, distance).
+- Goal setting and progress tracking.
+- Beautiful UI with charts and progress indicators.
+- Responsive design compatible with different screen sizes.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation Instructions
+1. Clone the repository:
+   ```bash
+   https://github.com/masud51435/fitness_tracking_app.git
