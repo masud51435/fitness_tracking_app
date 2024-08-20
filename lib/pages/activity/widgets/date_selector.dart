@@ -23,7 +23,7 @@ class _DateSelectorState extends State<DateSelector> {
       height: 90,
       child: Obx(
         () => ListView.builder(
-          controller: widget.controller.scrollController,
+          controller: widget.controller.dateSelectorScrollController,
           scrollDirection: Axis.horizontal,
           itemCount: widget.controller.days.length,
           itemBuilder: (context, index) {
