@@ -35,7 +35,7 @@ class CustomNavBar extends StatelessWidget {
               label: 'Activity',
             ),
             NavigationDestination(
-              icon: Icon(Iconsax.graph),
+              icon: Icon(Icons.insert_chart_outlined),
               label: 'Statistics',
             ),
             NavigationDestination(
