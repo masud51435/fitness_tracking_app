@@ -15,7 +15,8 @@ class WeeklyProgressReportRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 30),
-      child: Row(
+      child: Wrap(
+        runSpacing: 15,
         children: [
           WeeklyProgressItem(
             icon: Icons.directions_walk,

@@ -20,7 +20,7 @@ class ActivitiesSection extends StatelessWidget {
         const AppSectionHeading(text: 'Activities'),
         Obx(
           () {
-            // Filter out DailActivities where the title is 'Others'
+            // Filter out DailyActivities where the title is 'Others'
             final filterActivity = controller.dailyActivities
                 .where((activity) => activity.title != "Others")
                 .toList();

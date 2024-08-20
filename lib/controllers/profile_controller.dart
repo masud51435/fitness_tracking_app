@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 
-import '../pages/profile/widgets/goal_data_class.dart';
 
 class ProfileController extends GetxController {
   static ProfileController get instance => Get.find();

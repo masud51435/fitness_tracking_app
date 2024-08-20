@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class GoalActivityCard extends StatelessWidget {
   const GoalActivityCard({
@@ -7,7 +6,8 @@ class GoalActivityCard extends StatelessWidget {
     required this.image,
     required this.title,
     required this.target,
-    required this.time, required this.onTap,
+    required this.time,
+    required this.onTap,
   });
 
   final String image;
@@ -18,7 +18,7 @@ class GoalActivityCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Get.height * 0.12,
+      height: 90,
       margin: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(

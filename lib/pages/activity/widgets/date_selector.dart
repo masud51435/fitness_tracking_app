@@ -23,6 +23,7 @@ class _DateSelectorState extends State<DateSelector> {
       height: 90,
       child: Obx(
         () => ListView.builder(
+          controller: widget.controller.scrollController,
           scrollDirection: Axis.horizontal,
           itemCount: widget.controller.days.length,
           itemBuilder: (context, index) {
@@ -57,7 +58,7 @@ class _DateSelectorState extends State<DateSelector> {
                     Text(
                       widget.controller.days[index].day.toString(),
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: isSelected ? Colors.white : Colors.orange,
                       ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class ActivitiesCard extends StatelessWidget {
   final String title;
@@ -26,7 +25,7 @@ class ActivitiesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Get.height * 0.14,
+      height: 130,
       margin: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(

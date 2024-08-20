@@ -78,8 +78,6 @@ class ProgressBar extends StatelessWidget {
                   getTitlesWidget: (value, meta) {
                     const style = TextStyle(
                       color: Colors.black87,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
                     );
 
                     String percentage = '';
@@ -129,7 +127,7 @@ class ProgressBar extends StatelessWidget {
           barRods: [
             BarChartRodData(
               toY: controller.weeklyGoals[index].toDouble(),
-              color: isHighlighted ? Colors.red : Colors.grey[800],
+              color: isHighlighted ? Colors.deepOrangeAccent : Colors.grey[800],
               width: 18,
               borderRadius: BorderRadius.circular(0),
             ),

@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import '../pages/activity/widgets/activity_class.dart';
 
 class DailyActivityController extends GetxController {
-   static DailyActivityController get instance => Get.find();
+  static DailyActivityController get instance => Get.find();
   RxInt currentPageIndex = 0.obs;
-  final ScrollController scrollController = ScrollController();
+  late ScrollController scrollController;
 
   var totalCaloriesBurned = 1116.5.obs;
   var totalDistance = 14.8.obs;
@@ -16,6 +16,7 @@ class DailyActivityController extends GetxController {
 
   List<DateTime> days = <DateTime>[].obs;
   RxInt selectedIndex = 0.obs;
+  DateTime currentDateTime = DateTime.now();
 
   @override
   void onInit() {
@@ -23,31 +24,23 @@ class DailyActivityController extends GetxController {
     super.onInit();
     _generateDaysOfMonth();
     _setSelectedIndex();
-
-    scrollController.addListener(
-      () {
-        final pageIndex = (scrollController.offset / (Get.width / 2)).round();
-        if (pageIndex != currentPageIndex.value) {
-          currentPageIndex.value = pageIndex;
-        }
-      },
+    scrollController = ScrollController(
+      initialScrollOffset: 70.0 * currentDateTime.day,
     );
   }
 
   void _generateDaysOfMonth() {
-    DateTime now = DateTime.now();
-    int daysInMonth = DateTime(now.year, now.month + 1, 0).day;
+    int daysInMonth = DateTime(currentDateTime.year, currentDateTime.month + 1, 0).day;
     List<DateTime> tempDays = [];
     for (int i = 0; i < daysInMonth; i++) {
-      tempDays.add(DateTime(now.year, now.month, i + 1));
+      tempDays.add(DateTime(currentDateTime.year, currentDateTime.month, i + 1));
     }
 
     days.addAll(tempDays);
   }
 
   void _setSelectedIndex() {
-    DateTime now = DateTime.now();
-    selectedIndex.value = days.indexWhere((date) => date.day == now.day);
+    selectedIndex.value = days.indexWhere((date) => date.day == currentDateTime.day);
   }
 
   void onItemTap(int index) {

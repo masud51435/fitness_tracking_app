@@ -39,7 +39,7 @@ class ActivitySection extends StatelessWidget {
             return Column(
               children: [
                 SizedBox(
-                  height: Get.height * 0.18,
+                  height: 150,
                   child: ListView.builder(
                     controller: controller.scrollController,
                     scrollDirection: Axis.horizontal,

@@ -28,5 +28,3 @@ class TodayActivities extends StatelessWidget {
     );
   }
 }
-
-

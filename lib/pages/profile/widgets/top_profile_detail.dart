@@ -16,7 +16,7 @@ class TopProfileDetailSection extends StatelessWidget {
       child: Row(
         children: [
           const CircleAvatar(
-            radius: 40,
+            radius: 35,
             backgroundImage: AssetImage(
               'assets/images/user.png',
             ),
