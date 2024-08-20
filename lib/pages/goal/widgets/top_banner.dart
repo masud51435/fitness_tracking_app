@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../../common/custom_text_field.dart';
 import '../../../controllers/goal_controller.dart';
 
 class TopBanner extends StatelessWidget {
   const TopBanner({
-    super.key, required this.controller,
+    super.key,
+    required this.controller,
   });
 
   final GoalsController controller;
@@ -40,7 +43,9 @@ class TopBanner extends StatelessWidget {
                 ),
                 const SizedBox(height: 15),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _goalBottomSheet(controller);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(
@@ -74,4 +79,68 @@ class TopBanner extends StatelessWidget {
       ),
     );
   }
+
+  Future<dynamic> _goalBottomSheet(GoalsController controller) {
+    return Get.bottomSheet(
+      backgroundColor: Colors.grey[100],
+      SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Container(
+            width: Get.width,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+            ),
+            child: Column(
+              children: <Widget>[
+                const Text(
+                  "Set your Goals",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                const Column(
+                  children: [
+                    CustomTextField(
+                      title: 'WorkOut',
+                    ),
+                    SizedBox(height: 20),
+                    CustomTextField(
+                      title: 'Calories',
+                    ),
+                    SizedBox(height: 20),
+                    CustomTextField(
+                      title: 'Steps',
+                    ),
+                    SizedBox(height: 20),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    OutlinedButton(
+                      onPressed: Get.back,
+                      child: const Text("Close"),
+                    ),
+                    OutlinedButton(
+                      onPressed: Get.back,
+                      child: const Text("Set"),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
+
+
