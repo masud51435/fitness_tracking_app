@@ -19,6 +19,7 @@ class WeeklyProgressItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
+      crossAxisAlignment: WrapCrossAlignment.center,
       children: [
         Icon(
           icon,
